@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.main-content {
+    max-width: 1735px;
+}
+
+.container {
+    position: absolute;
+    max-width: 1735px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.billboard-image {
+    position: absolute;
+    background-color: #555555;
+    width: 100vw;
+    height: 25vh;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+}
+
+.main-image {
+    background-image: url('../img/movies/ted.webp');
+    height: 25vh;
+    background-size: cover;
+}
+
+.page-header {
+    position: fixed;
+    width: 94.3vw;
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    z-index: 2;
+}
+
+.black-bg {
+    background-color: #000000;
+}
+
+.logo-menu {
+    display: flex;
+}
+
+.logo {
+    max-width: 70px;
+    height: 50px;
+}
+
+.navigation-desktop {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 200px;
+}
+
+.navigation-mobile {
+    display: block;
+}
+
+.nav-link {
+    position: absolute;
+    font-size: 10px;
+    left: 110px;
+    top: 18px;
+}
+
+.menu-list {
+    display: none;
+    width: 250px;
+    border: 1px solid #383838;
+    border-top: 2px solid #e6e6e6;
+    margin-top: 38px;
+    position: absolute;
+    left: 0;
+    color: #c4c4c4;
+}
+
+.menu-list div {
+    background-color: rgba(0, 0, 0, 0.808);
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.selected-item{
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.menu-list-desktop li {
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 14px;
+    transition: .5s;
+}
+
+
+.menu-list-desktop li:hover {
+    color: #b3b3b3;
+}
+.user-options {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 28px;
+    border-radius: 5px;
+}
+
+.billboard-info {
+    padding-top: 70px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.billboard-title {
+    max-width: 160px;
+    margin-bottom: 20px;
+}
+
+.billboard-text {
+    display: none;
+    width: 650px;
+    font-size: 22px;
+    line-height: 30px;
+    text-shadow: 2px 2px 2px rgb(0 0 0 / 45%);
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.watch-button, .more-info-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0 21px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.more-info-button {
+    cursor: pointer;
+    background-color: rgba(109,109,110,0.7);
+    color: #ffffff;
+    transition: .5s;
+}
+
+.more-info-button:hover {
+    background-color: rgba(109,109,110,0.4);
+}
+
+.watch-button {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    transition: .5s;
+}
+
+.watch-button:hover {
+    background-color: rgba(255,255,255,0.75);
+}
+
+.play-button, .info-button {
+    height: 14px;
+    padding-right: 5px;
+}
+
+.catalogue-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.catalogue {
+    margin: auto;
+}
+
+.catalogue-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.catalogue-items li {
+    width: 49.2%;
+    padding-bottom: 5px;
+}
+
+.catalogue-video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.page-info {
+    width: 70%;
+    border-top: 1px solid rgb(128 128 128 / 26%);
+    margin: 0 auto;
+    margin-top: 50px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    color: gray;
+}
+
+.footer-links {
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.footer-links tr{
+    line-height: 23px;
+}
+
+.footer-links tr td {
+    width: 180px;
+}
+
+.social-network {
+    margin: 10px 0;
+}
+
+.fa-brands {
+    margin-right: 10px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.show {display: block;}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 60px;
+    }
+
+    .billboard-image {
+        width: 99.1vw;
+        height: 90vh;
+    }
+
+    .main-image {
+        height: 90vh;
+    }
+
+    .page-header {
+        width: 92.9vw;
+        height: 70px;
+        padding: 0 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+        z-index: 2;
+    }
+
+    .logo {
+        max-width: 92px;
+        height: 70px;
+    }
+
+    .navigation-mobile {
+        display: none;
+    }
+
+    .navigation-desktop {
+        display: block;
+    }
+
+    .user-options {
+        width: 5%;
+    }
+    
+    .avatar {
+        width: 32px;
+    }
+
+    .billboard-info {
+        padding-top: 220px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .billboard-title {
+        max-width: 650px;
+    }
+
+    .billboard-text {
+        display: block;
+    }
+
+    .main-buttons {
+        display: flex;
+        justify-content: start;
+        margin-top: 20px;
+    }
+
+    .watch-button, .more-info-button {
+        font-size: 22px;
+        line-height: 58px;
+        padding: 0 30px;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+    .more-info-button {
+        margin-left: 20px;
+    }
+
+    .play-button, .info-button {
+        height: 28px;
+        padding-right: 15px;
+    }
+
+    .catalogue-title {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+
+    .catalogue {
+        width: 100%;
+    }
+    
+    .catalogue-items li {
+        width: 287px;
+    }
+
+    .page-info {
+        margin-top: 100px;
+    }
+}
+
+/*
+.container {
+    box-sizing: border-box;
+    max-width: 1735px;
+    padding: 0 30px;
+}
+
+.logo {
+    max-width: 70px;
+    position: absolute;
+    z-index: 1;
+}
+
+nav {
+    position: absolute;
+    z-index: 1;
+}
+
+.menu a{
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #b3b3b3;
+}
+
+.item-ativo a {
+    color: #ffffff;
+}
+
+
+.usuario {
+    max-width: 28px;
+}
+
+.pagina-inicial {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+}
+
+.secao-destaque-conteudo {
+    position: absolute;
+    background-image: url('../img/movies/ted.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0;
+    }
+
+    .logo {
+        max-width: 92px;
+    }
+
+    .usuario {
+        max-width: 32px;
+    }
+}
+*/
